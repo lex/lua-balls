@@ -7,8 +7,13 @@ function Ball.new()
   self.position.x = 0
   self.position.y = 0
 
-  self.position.w = 128
-  self.position.h = 128
+  self.diameter = 128
+  self.mass = 100
+
+  self.position.w = self.diameter
+  self.position.h = self.diameter
+
+  self.radius = self.diameter / 2
 
   self.acceleration = {}
   self.acceleration.x = 0
