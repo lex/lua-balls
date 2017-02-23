@@ -43,6 +43,7 @@ function physics.calculatePhysics(objects, step, width, height)
       end
     end
 
+
     ::continue::
   end
 end

@@ -6,7 +6,7 @@ local debug = false
 
 local balls = {}
 
-local maxFps = 60
+local maxFps = 90
 local frameTime = 1 / maxFps * 1000
 
 local running = true

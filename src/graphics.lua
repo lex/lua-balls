@@ -2,8 +2,8 @@ local SDL = require "SDL"
 local image = require "SDL.image"
 
 local graphics = {}
-local width = 1600
-local height = 900
+local width = 640
+local height = 480
 
 local ret, err = SDL.init {
   SDL.flags.Video,
