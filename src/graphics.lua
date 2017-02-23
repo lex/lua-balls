@@ -19,7 +19,7 @@ if not formats[image.flags.PNG] then
   error(err)
 end
 
-local img, ret = image.load("ball.png")
+local img, ret = image.load("../res/ball.png")
 
 if not img then
   error(err)
