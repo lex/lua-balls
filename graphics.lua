@@ -56,10 +56,19 @@ function graphics.render(objects)
   renderer:clear()
 
   for i, o in ipairs(objects) do
-    renderer:copy(ball, nil, o.position)
+    renderer:copy(ball, nil, graphics.objectPositionForSdl(o))
   end
 
   renderer:present()
+end
+
+function graphics.objectPositionForSdl(o)
+  return {
+    x=o.position.x,
+    y=o.position.y,
+    w=o.width,
+    h=o.height
+  }
 end
 
 return graphics

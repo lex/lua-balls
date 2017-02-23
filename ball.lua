@@ -1,31 +1,38 @@
+local Vector = require "vector"
 local Ball = {}
 
 function Ball.new()
   local self = {}
 
-  self.position = {}
-  self.position.x = 0
-  self.position.y = 0
+  self.position = Vector(0, 0)
 
   self.diameter = 128
-  self.mass = 100
 
-  self.position.w = self.diameter
-  self.position.h = self.diameter
+  self.width = self.diameter
+  self.height = self.diameter
+
+  self.mass = 100
 
   self.radius = self.diameter / 2
 
-  self.acceleration = {}
-  self.acceleration.x = 0
-  self.acceleration.y = 0
+  self.acceleration = Vector(0, 0)
 
-  self.velocity = {}
-  self.velocity.x = 0
-  self.velocity.y = 0
+  self.velocity = Vector(0, 0)
 
   function self.setPosition(x, y)
-    self.position.x = x - self.position.w / 2
-    self.position.y = y - self.position.h / 2
+    self.position.x = x - self.width / 2
+    self.position.y = y - self.height / 2
+  end
+
+  function self.getCenterPosition()
+    local x = self.position.x + self.width / 2
+    local y = self.position.y + self.height / 2
+    return Vector(x, y)
+  end
+
+  function self.print()
+    print(self.acceleration)
+    print(self.velocity)
   end
 
   return self
